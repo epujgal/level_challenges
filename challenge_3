@@ -1,0 +1,25 @@
+import os
+import re
+user_name=raw_input()
+print user_name
+password=raw_input()
+def functon(password):
+    if len(password)>=6 or len(password)>12:
+        if re.search("[a-z]",password):
+            if re.search("[0-9]", password):
+                if re.search("[A-Z]", password):
+                    if re.search("[$#@]", password):
+                        print("password entered is {} good".format(password))
+                    else:
+                        print("$#@")
+                else:
+                    print("captlaize")
+            else:
+                print("should contain number")
+    else:
+        print("check length")
+functon(password)
+print
+
+
+
